@@ -1,14 +1,12 @@
 <template>
-    <div class="navbar">
-        <div class="container">
-            <div class="logo">
-                <img src="../assets\img\dc-logo.png" alt="">
-            </div>
-            <div class="nav-menu">
-                <ul>
-                    <li v-for="(item, index) in items" :key="index" :class="{ active : item.status}"><a :href="item.url">{{item.text}}</a></li>
-                </ul>
-            </div>
+    <div class="container">
+        <div class="logo">
+            <img src="../assets\img\dc-logo.png" alt="">
+        </div>
+        <div class="nav-menu">
+            <ul>
+                <li v-for="(item, index) in items" :key="index" :class="{ active : item.status}"><a :href="item.url">{{item.text}}</a></li>
+            </ul>
         </div>
     </div>
 
@@ -19,7 +17,7 @@
 
 <script>
     export default {
-        name : 'header',
+        name : 'myHeader',
         data() {
             return {
                 items: [
@@ -81,42 +79,40 @@
 
 <style scoped lang="scss">
     @import '../assets/style/global.scss';
-    .navbar{
-        .container{
-            height: 120px;
+    .container{
+        height: 120px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo{
+        img{
+            width: 80px;
+        }
+    }
+    .nav-menu{
+        ul{
+            list-style: none;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo{
-            img{
-                width: 80px;
-            }
-        }
-        .nav-menu{
-            ul{
-                list-style: none;
-                display: flex;
-                >:hover{
-                        border-bottom: 5px solid $mainColor;
-                    }
-                li{
-                    margin: 0px 10px;
-                    line-height: 115px;
-                    transition: 0.3s;
-                    transition-timing-function: ease-in-out;
-                    a{
-                        color: #303030;
-                        text-decoration: none;
-                        text-transform: uppercase;
-                        font-size: 14px;
-                        font-weight: 600;
-                        padding: 5px;
-                        font-family: 'Roboto Condensed', 'Roboto', Arial, Helvetica, sans-serif;
-                    }
-                    :hover{
-                        color: $mainColor;
-                    }
+            >:hover{
+                    border-bottom: 5px solid $mainColor;
+                }
+            li{
+                margin: 0px 10px;
+                line-height: 113px;
+                transition: 0.3s;
+                transition-timing-function: ease-in-out;
+                a{
+                    color: #303030;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    font-weight: 600;
+                    padding: 5px;
+                    font-family: 'Roboto Condensed', 'Roboto', Arial, Helvetica, sans-serif;
+                }
+                :hover{
+                    color: $mainColor;
                 }
             }
         }
