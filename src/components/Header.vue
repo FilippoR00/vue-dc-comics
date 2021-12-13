@@ -100,7 +100,7 @@
             li{
                 margin: 0px 10px;
                 line-height: 113px;
-                transition: 0.3s;
+                transition: 0.2s;
                 transition-timing-function: ease-in-out;
                 a{
                     color: #303030;
