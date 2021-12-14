@@ -146,7 +146,7 @@
             }
             .right{
                 display: flex;
-                justify-content: end;
+                justify-content: flex-end;
                 position: relative;
                 top: -95px;
             }
